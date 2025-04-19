@@ -5,85 +5,687 @@
 }
 
 body {
-  font-family: Arial, sans-serif;
+  font-family: 'Poppins', Arial, sans-serif;
+  background: linear-gradient(225deg, #F0A04B, #c5d4b4);
+  min-height: 100vh;
 }
 
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+/* Header Styling */
 header {
+  width: 90%;
+  max-width: 1200px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 87px 133px ;
-  background-color: #f0a04b;
+  padding: 30px 50px;
+  background-color: rgba(240, 160, 75, 0.9);
+  position: fixed;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-top: 20px;
+  border-radius: 20px;
+  z-index: 100;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
 
-.brand {
-  display: flex;
-  align-items: center;
-  gap: 10px;
+.brand img {
+  width: 80px;
+  height: auto;
 }
-
-.logo {
-  width: 124px;
-  height: 113px;
-}
-
 
 nav {
-  flex: 1; 
+  flex: 1;
   display: flex;
-  justify-content: center; 
+  justify-content: center;
 }
 
 nav ul {
   display: flex;
-  gap: 50px;
+  gap: 30px;
   list-style: none;
 }
 
 nav ul li a {
   text-decoration: none;
   color: white;
-  font-size: 24px;
+  font-size: 18px;
   font-weight: bold;
+  transition: all 0.3s ease;
 }
 
+nav ul li a:hover {
+  color: #ffea00;
+}
 
 .login {
   background-color: #ffea00;
-  padding: 10px 30px;
-  font-family: arial,sans-serif;
+  padding: 10px 25px;
+  font-weight: bold;
+  border-radius: 15px;
+  cursor: pointer;
+  border: none;
+  font-size: 16px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.login:hover {
+  background-color: #e6d200;
+  transform: translateY(-2px);
+}
+
+/* Menu Toggle for Mobile */
+.menu-toggle {
+  display: none;
+  color: white;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+/* Home Section */
+.satu {
+  display: flex;
+  color: white;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+  padding: 180px 5% 80px;
+}
+
+.teks {
+  width: 45%;
+  max-width: 500px;
+  text-align: center;
+}
+
+.kucing-kardus {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+}
+
+h1 {
+  font-size: 48px;
+  line-height: 1.2;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+p {
+  font-size: 18px;
+  line-height: 1.5;
+  margin-top: 10px;
+}
+
+.adopt {
+  background-color: #ffea00;
+  padding: 12px 30px;
+  font-family: 'Poppins', Arial, sans-serif;
+  font-weight: bold;
+  border-radius: 15px;
+  cursor: pointer;
+  border: none;
+  margin-top: 30px;
+  font-size: 18px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(255, 234, 0, 0.3);
+}
+
+.adopt:hover {
+  background-color: #e6d200;
+  transform: translateY(-2px);
+}
+
+/* Who Are We Section */
+.dua {
+  background-color: #FCE7C8;
+  padding: 80px 5%;
+  display: flex;
+  justify-content: center;
+  min-height: 500px;
+  align-items: center;
+  position: relative;
+  gap: 50px;
+}
+
+.kiri {
+  display: flex;
+  flex-direction: column;
+}
+
+.kiri-bawah {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  align-items: center;
+}
+
+.dua h2 {
+  font-size: 46px;
+  margin-top: 0;
+}
+
+.dua p {
+  font-size: 28px;
+  margin: 0;
+}
+
+.logo_kecil {
+  width: 50px;
+  height: auto;
+}
+
+.gbr_cat img {
+  max-width: 100%;
+  height: auto;
+}
+
+.icon-paw {
+  position: absolute;
+  top: -153px;
+  left: 5%;
+  width: 150px;
+  height: auto;
+  z-index: 3;
+}
+
+.icon-paw img {
+  width: 350px;
+  height: auto;
+}
+
+/* Key Benefits Section */
+.tiga {
+  background: linear-gradient(to bottom, #FCE7C8, #F0A04B 60%);
+  min-height: 800px;
+  padding: 80px 5%;
+  position: relative;
+}
+
+.tiga h2 {
+  color: #e38521;
+  font-style: italic;
+  font-size: 52px;
+  text-align: center;
+  padding-bottom: 35px;
+}
+
+.fitur-container {
+  /* display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); */
+  gap: 100px;
+  justify-content: center;
+  margin-top: 35px;
+  display: flex;
+  flex-direction: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.fitur-item {
+  background-color: #ebedea;
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  width: 350px;
+  transition: transform 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.fitur-item:hover {
+  transform: translateY(-10px);
+}
+
+.fitur-icon {
+  width: 80%;
+  max-width: 200px;
+  height: auto;
+  border-radius: 15px;
+  margin-bottom: 15px;
+}
+
+.tiga h3 {
+  text-align: center;
+  font-size: 24px;
+  margin-bottom: 15px;
+}
+
+.tiga p {
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+/* Testimonials Section */
+.empat {
+  background: linear-gradient(to top, #FCE7C8 60%, #F0A04B);
+  padding: 80px 5%;
+}
+
+.empat h2 {
+  font-style: italic;
+  font-size: 52px;
+  text-align: center;
+  padding-bottom: 35px;
+  color: #ebedea;
+}
+
+.cus-container {
+  display: flex;
+  flex-direction: center;
+  flex-wrap: wrap;
+  /* display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); */
+  gap: 100px;
+  justify-content: center;
+  margin-top: 35px;
+}
+
+.fitur-testi {
+  background-color: #ebedea;
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 500px;
+}
+
+.fitur-testi:hover {
+  transform: translateY(-10px);
+}
+
+.fitur-cus {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 15px;
+}
+
+.fitur-testi h3 {
+  font-size: 22px;
+  margin-bottom: 5px;
+}
+
+/* FAQ Section */
+.lima {
+  background-color: #F0A04B;
+  padding: 80px 5%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.lima h2 {
+  font-size: 42px;
+  color: white;
+  font-style: italic;
+  text-align: center;
+  padding-bottom: 40px;
+}
+
+.qna {
+  max-width: 800px;
+  width: 100%;
+}
+
+.question {
+  font-weight: bold;
+  font-size: 20px;
+  color: white;
+  margin-top: 20px;
+}
+
+.awnser {
+  font-size: 18px;
+  color: white;
+  margin-bottom: 20px;
+}
+
+/* CTA Section */
+.enam {
+  background-color: #FCE7C8;
+  padding: 70px 5%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+}
+
+.enam img {
+  max-width: 200px;
+  height: auto;
+}
+
+.teks2 {
+  text-align: center;
+  max-width: 400px;
+}
+
+.enam h3 {
+  font-size: 32px;
+  margin-bottom: 15px;
+}
+
+.tombol {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.enam {
+  position: relative;
+  background-color: #ffeacc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.enam .tombol {
+  position: relative;
+  display: inline-block;
+}
+
+.enam .tombol button {
+  background-color: yellow;
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 1rem;
+  font-weight: bold;
+  position: relative;
+  z-index: 1;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+.enam .tombol .tangan {
+  position: absolute;
+  top: -37px; /* Ubah sesuai kebutuhan */
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+  width: 60px; /* atau sesuai ukuran gambar */
+}
+
+.enam button {
+  background-color: #ffea00;
+  padding: 12px 30px;
   font-weight: bold;
   border-radius: 15px;
   cursor: pointer;
   border: none;
   font-size: 18px;
+  position: relative;
+  z-index: 0;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(255, 234, 0, 0.3);
 }
+
+.enam button:hover {
+  background-color: #e6d200;
+  transform: translateY(-2px);
+}
+
+/* Footer */
+footer {
+  background-color: #F0A04B;
+  padding: 50px 5%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+.about {
+  max-width: 400px;
+}
+
+footer h3 {
+  font-size: 20px;
+  padding-bottom: 20px;
+}
+
+footer section {
+  min-width: 200px;
+}
+
+footer p {
+  font-size: 16px;
+  line-height: 1.6;
+  margin-bottom: 10px;
+}
+
+footer li {
+  font-size: 16px;
+  margin-bottom: 10px;
+  list-style: none;
+}
+
+footer a {
+  color: black;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+footer a:hover {
+  color: white;
+}
+
+/* Media Queries */
+@media (max-width: 1024px) {
+  header {
+    padding: 20px 30px;
+  }
+  
+  .brand img {
+    width: 60px;
+  }
+  
+  nav ul {
+    gap: 20px;
+  }
+  
+  nav ul li a {
+    font-size: 16px;
+  }
+  
+  .dua h2 {
+    font-size: 38px;
+  }
+  
+  .dua p {
+    font-size: 24px;
+  }
+  
+  .tiga h2, .empat h2 {
+    font-size: 42px;
+  }
+}
+
 @media (max-width: 768px) {
   header {
+    width: 95%;
+    padding: 15px 20px;
+  }
+  
+  .brand img {
+    width: 50px;
+  }
+  
+  nav ul {
+    gap: 15px;
+  }
+  
+  nav ul li a {
+    font-size: 14px;
+  }
+  
+  .login {
+    padding: 8px 20px;
+    font-size: 14px;
+  }
+  
+  .satu {
+    flex-direction: column;
+    /* text-align: center; */
+    padding-top: 150px;
+  }
+  
+  .teks {
+    width: 90%;
+    max-width: none;
+  }
+  
+  h1 {
+    font-size: 36px;
+  }
+  
+  .kucing-kardus {
+    max-width: 350px;
+  }
+  
+  .dua {
+    flex-direction: column;
+    text-align: center;
+    padding: 60px 5%;
+  }
+  
+  .kiri-bawah {
+    justify-content: center;
+  }
+  
+  .icon-paw {
+    display: none;
+  }
+  
+  .tiga h2, .empat h2, .lima h2 {
+    font-size: 36px;
+  }
+  
+  /* .cus-container {
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  } */
+  
+  .enam {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .tombol img{
+    display: none;
+  }
+
+  footer {
     flex-direction: column;
     align-items: center;
     text-align: center;
-    padding: 40px 20px;
   }
-
-  .brand {
-    flex-direction: column;
-    gap: 5px;
-  }
-
-  nav {
+  
+  .about, footer section {
     width: 100%;
-    margin-top: 20px;
+    max-width: none;
   }
+}
 
+@media (max-width: 480px) {
+  header {
+    width: 95%;
+    padding: 12px 15px;
+    margin-top: 10px;
+  }
+  
+  .brand img {
+    width: 40px;
+  }
+  
   nav ul {
-    flex-direction: column;
-    align-items: center;
-    gap: 15px;
-    padding: 0;
+    gap: 10px;
+    width: 80%;
+    justify-content: space-between;
   }
 
+  nav{
+    width: 100%;
+    justify-content: center;
+  }
+
+  nav ul li{
+    width: 30px;
+  }
+  
+  nav ul li a {
+    font-size: 10px;
+    width: fit-content;
+    line-height: 1;
+  }
+  
   .login {
-    margin-top: 20px;
+    padding: 6px 15px;
+    font-size: 12px;
+  }
+  
+  h1 {
+    font-size: 28px;
+  }
+  
+  p {
+    font-size: 16px;
+  }
+  
+  .adopt {
+    padding: 10px 25px;
+    font-size: 16px;
+  }
+  
+  .dua h2 {
+    font-size: 32px;
+  }
+  
+  .dua p {
+    font-size: 20px;
+  }
+  
+  .tiga h2, .empat h2, .lima h2 {
+    font-size: 28px;
+  }
+  
+
+  
+  .fitur-item, .fitur-testi {
+    padding: 20px;
+  }
+  
+  .enam h3 {
+    font-size: 24px;
+  }
+  
+  .enam p {
+    font-size: 16px;
+  }
+  
+  .question {
+    font-size: 18px;
+  }
+  
+  .awnser {
+    font-size: 16px;
   }
 }
